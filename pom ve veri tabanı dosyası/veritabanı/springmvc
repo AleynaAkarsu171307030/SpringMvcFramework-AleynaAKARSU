@@ -1,0 +1,17 @@
+create database springmvc;
+use springmvc;
+
+create table users(
+id int(11) primary key auto_increment key not null,
+tc int(11) unique key not null,
+ad varchar(200) not null,
+adres varchar(250) not null,
+telefon int(11) not null,
+mail varchar(150) not null,
+tarih varchar(90) not null,
+bilgi varchar (10) not null,
+sebep varchar(200) not null,
+düsünce varchar(150) not null,
+miktar int(11) not null,
+eklemek varchar(300) not null
+);
