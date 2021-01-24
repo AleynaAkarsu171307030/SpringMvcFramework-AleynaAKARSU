@@ -1,0 +1,98 @@
+package springmvc_example.model;
+
+public class User {
+private Integer id;
+private Integer tc;
+private String ad;
+private String adres;
+private Integer telefon;
+private String mail;
+private String tarih;
+private String bilgi;
+private String sebep;
+private String düsünce;
+private Integer miktar;
+private String eklemek;
+
+
+public User() {
+	super();
+}
+public User(Integer id) {
+	super();
+	this.id = id;
+}
+public Integer getId() {
+	return id;
+}
+public void setId(Integer id) {
+	this.id = id;
+}
+public Integer getTc() {
+	return tc;
+}
+public void setTc(Integer tc) {
+	this.tc = tc;
+}
+public String getAd() {
+	return ad;
+}
+public void setAd(String ad) {
+	this.ad = ad;
+}
+public String getAdres() {
+	return adres;
+}
+public void setAdres(String adres) {
+	this.adres = adres;
+}
+public Integer getTelefon() {
+	return telefon;
+}
+public void setTelefon(Integer telefon) {
+	this.telefon = telefon;
+}
+public String getMail() {
+	return mail;
+}
+public void setMail(String mail) {
+	this.mail = mail;
+}
+public String getTarih() {
+	return tarih;
+}
+public void setTarih(String tarih) {
+	this.tarih = tarih;
+}
+public String getBilgi() {
+	return bilgi;
+}
+public void setBilgi(String bilgi) {
+	this.bilgi = bilgi;
+}
+public String getSebep() {
+	return sebep;
+}
+public void setSebep(String sebep) {
+	this.sebep = sebep;
+}
+public String getDüsünce() {
+	return düsünce;
+}
+public void setDüsünce(String düsünce) {
+	this.düsünce = düsünce;
+}
+public Integer getMiktar() {
+	return miktar;
+}
+public void setMiktar(Integer miktar) {
+	this.miktar = miktar;
+}
+public String getEklemek() {
+	return eklemek;
+}
+public void setEklemek(String eklemek) {
+	this.eklemek = eklemek;
+}
+
+}
