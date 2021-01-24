@@ -1,0 +1,56 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Bilgi Listeleme</title>
+</head>
+<body>
+ <spring:url value="/user/add" var="addURL" />
+ <a href="${addURL }">Add User</a>
+<h1>Users List</h1>
+   <table width="100%" border="1">
+   <tr>
+        <th>ID</th>
+        <th>TC</th>
+         <th>Ad-Soyad</th>
+         <th>Adres</th>
+        <th>Telefon</th>
+        <th>Mail</th>
+        <th>Tarih</th>
+        <th>Bilgi</th>
+        <th>Sebep</th>
+        <th>Düsünce</th>
+        <th>Miktar</th>
+        <th>Eklemek Istedikleriniz</th>
+        <th colspan="2">Secim</th>
+        </tr>
+         <c:forEach items="${listUser }" var="user" >
+        <tr>
+          <td>${user.id}</td>
+          <td>${user.tc}</td>
+          <td>${user.ad}</td>
+          <td>${user.adres}</td>
+          <td>${user.telefon}</td>
+          <td>${user.mail}</td>
+          <td>${user.tarih}</td>
+          <td>${user.bilgi}</td>
+           <td>${user.sebep}</td>
+           <td>${user.düsünce}</td>
+            <td>${user.miktar}</td>
+            <td>${user.eklemek}</td>
+            <td>
+            <spring:url value="/user/update/${user.id}" var="updateUrl"/>
+            <a href="${updateUrl}">Güncelle</a>
+            </td>
+             <td>
+            <spring:url value="/user/delete/${user.id}" var="deleteUrl"/>
+            <a href="${deleteUrl}">Sil</a>
+            </td>
+        </tr>
+        </c:forEach>
+</table>
+</body>
+</html>
