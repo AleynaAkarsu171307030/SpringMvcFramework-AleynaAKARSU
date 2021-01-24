@@ -1,0 +1,94 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Bilgi Kaydi</title>
+</head>
+<body>
+ <spring:url value="/user/save" var="saveURL" />
+ <form:form modelAttribute="userForm" method="post" action="${saveURL }" >
+  <form:hidden path="id"/>
+  <table>
+   <tr>
+    <td>TC : </td>
+    <td>
+     <form:input path="tc"/>
+    </td>
+   </tr>
+   <tr>
+    <td>Ad-Soyad: </td>
+    <td>
+     <form:input path="ad"/>
+    </td>
+   </tr>
+   <tr>
+    <td>Adres: </td>
+    <td>
+     <form:input path="adres"/>
+    </td>
+   </tr>
+    <tr>
+    <td>Telefon: </td>
+    <td>
+     <form:input path="telefon"/>
+    </td>
+   </tr>
+    <tr>
+    <td>Mail: </td>
+    <td>
+     <form:input path="mail"/>
+    </td>
+   </tr>
+    <tr>
+    <td>Dogum Tarih: </td>
+    <td>
+     <form:input path="tarih"/>
+    </td>
+   </tr>
+    <tr>
+    <td>Perakende Ticareti ile Ugrastiniz mi? </td>
+    <td>
+     <form:input path="bilgi"/>
+    </td>
+   </tr>
+    <tr>
+    <td>Lokumcu Babayi Tercih Sebebi Nedir? </td>
+    <td>
+     <form:input path="sebep"/>
+    </td>
+   </tr>
+    <tr>
+    <td>Hangi Il/Ilce/Semt icin Lokumcu Baba Isletmeciligini Dusunuyorsunuz?: </td>
+    <td>
+     <form:input path="düsünce"/>
+    </td>
+   </tr>
+    <tr>
+    <td>Yatirim Miktariniz Nedir?: </td>
+    <td>
+     <form:input path="miktar"/>
+    </td>
+   </tr>
+    <tr>
+    <td>Eklemek Isteikleriniz: </td>
+    <td>
+     <form:input path="eklemek"/>
+    </td>
+   </tr>
+   <tr>
+    <td></td>
+    <td>
+     <button type="submit">Save</button>
+    </td>
+   </tr>
+  </table>
+  
+ </form:form>
+ 
+</body>
+</html>
